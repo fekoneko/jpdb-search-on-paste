@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "JPDB Search on Paste",
+  "version": "1.0",
+  "applications": {
+    "gecko": {
+      "id": "jpdb-search-on-paste@fekoneko.github.io",
+      "strict_min_version": "60.0"
+    }
+  },
+  "description": "",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "permissions": ["*://*.jpdb.io/*", "clipboardRead"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.jpdb.io/*"],
+      "js": ["src/index.js"]
+    }
+  ]
+}
